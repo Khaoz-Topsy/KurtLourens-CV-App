@@ -2,7 +2,7 @@
     "details": {
         "image": "assets/images/KurtAvatar.svg",
         "intro": "Full Stack Engineer with [workDuration] of experience working for large companies on various technology solutions. I find that the best way to learn is to build! I love creating beautiful and striking front-end user experiences, blazing fast APIs, services, etc, that follow best practices and building amazing user experiences for mobile. Working on so many projects as well as joining [redRubyIt] as a Co-Owner has taught me so much, not just about code, but also how to mentor, present, manage expectations and run projects. My goal is to continue learning all that I can and use that knowledge to create more opportunities to learn! 😂",
-        "postSript": "P.S. I also have a [blog], Inside my Mind - by Kurt Lourens. I haven't been making use of it as much as I could have, but I have written an article on it about how I made this site and all the effort I put in to make it the best that it could be [blogCvArticle] 😁.",
+        "postScript": "P.S. I also have a [blog], Inside my Mind - by Kurt Lourens. I haven't been making use of it as much as I could have, but I have written an article on it about how I made this site and all the effort I put in to make it the best that it could be [blogCvArticle] 😁.",
         "descriptions": [
             ".Net Core Advocate",
             "Crazy about Javascript Frameworks",
@@ -53,12 +53,26 @@
     "workExperiences": [
         {
             "title": "Senior Software Engineer",
+            "company": "Entelect Netherlands",
+            "icon": "military_tech_rounded",
+            "image": "assets/images/company/Entelect.png",
+            "imageAlt": "Entelect Netherlands",
+            "timePeriodText": "October 2021 - Present",
+            "timePeriodTextAlt": "Current position",
+            "timePeriodClass": "label-entelect",
+            "timePeriodColour": "#004C8E",
+            "timePeriodTextColour": "#FFFFFF",
+            "content": "Through various courses and opportunities within the project I was able to show [entelect] and BEE123 that I am able to design complex systems, develop solutions, mentor team members and manage sprints for the team. There is still a lot to learn and I look forward to the opportunities and possibilities made available to me going forward with this new position",
+            "location": "Amsterdam, The Netherlands"
+        },
+        {
+            "title": "Senior Software Engineer",
             "company": "Entelect",
             "icon": "military_tech_rounded",
             "image": "assets/images/company/Entelect.png",
             "imageAlt": "Entelect",
-            "timePeriodText": "July 2021 – Present",
-            "timePeriodTextAlt": "Current position - Full time",
+            "timePeriodText": "July 2021 - September 2021",
+            "timePeriodTextAlt": "3 months",
             "timePeriodClass": "label-entelect",
             "timePeriodColour": "#004C8E",
             "timePeriodTextColour": "#FFFFFF",
@@ -71,7 +85,7 @@
             "icon": "person_add",
             "image": "assets/images/company/Entelect.png",
             "imageAlt": "Entelect",
-            "timePeriodText": "January 2019 – June 2021",
+            "timePeriodText": "January 2019 - June 2021",
             "timePeriodTextAlt": "2.5 years",
             "timePeriodClass": "label-entelect",
             "timePeriodColour": "#004C8E",
@@ -85,7 +99,7 @@
             "icon": "person",
             "image": "assets/images/company/Entelect.png",
             "imageAlt": "Entelect",
-            "timePeriodText": "January 2017 – December 2018",
+            "timePeriodText": "January 2017 - December 2018",
             "timePeriodTextAlt": "2 years",
             "timePeriodClass": "label-entelect",
             "timePeriodColour": "#004C8E",
@@ -100,8 +114,8 @@
             "image": "assets/images/company/RedRubyIT.png",
             "imageAlt": "RedRubyIT",
             "darkModeImage": "assets/images/company/RedRubyITAlt.png",
-            "timePeriodText": "January 2014 – Present",
-            "timePeriodTextAlt": "Consult for and provide support",
+            "timePeriodText": "January 2014 - Present",
+            "timePeriodTextAlt": "Currently only providing support",
             "timePeriodClass": "label-ruby",
             "timePeriodColour": "#BE1F25",
             "timePeriodTextColour": "#FFFFFF",
@@ -114,7 +128,7 @@
             "icon": "settings_input_hdmi",
             "image": "assets/images/company/Vuma.png",
             "imageAlt": "Vuma",
-            "timePeriodText": "January 2016 – June 2016",
+            "timePeriodText": "January 2016 - June 2016",
             "timePeriodTextAlt": "6 months",
             "timePeriodClass": "label-vuma",
             "timePeriodColour": "#FF52A6",
@@ -128,12 +142,12 @@
             "icon": "assignment_ind",
             "image": "assets/images/company/Endeavour.png",
             "imageAlt": "Endeavour",
-            "timePeriodText": "January 2015 – January 2015",
+            "timePeriodText": "January 2015 - January 2015",
             "timePeriodTextAlt": "1 month",
             "timePeriodClass": "label-endeavour",
             "timePeriodColour": "#AE8C5E",
             "timePeriodTextColour": "#000000",
-            "content": "I worked for Endeavour Mining – Adamus Resources Ltd, Nzema Ghana as an intern. I worked with virtual servers using a hypervisor (VMWare ESXi 5.1.0) to install create Windows Server 2008 R2 and 2012 environments as well as configure them to make use of Group Policies and Active Directory Management.",
+            "content": "I worked for Endeavour Mining - Adamus Resources Ltd, Nzema Ghana as an intern. I worked with virtual servers using a hypervisor (VMWare ESXi 5.1.0) to install create Windows Server 2008 R2 and 2012 environments as well as configure them to make use of Group Policies and Active Directory Management.",
             "location": "Nzema Mine, Ghana",
             "buttons": [
                 {
@@ -142,8 +156,8 @@
                     "text": "Project Description"
                 },
                 {
-                    "url": "/docs/EndeavourMiningInternshipJan2015-CertificateofService.pdf",
-                    "alt": "CertificateofService",
+                    "url": "/docs/EndeavourMiningInternshipJan2015-CertificateOfService.pdf",
+                    "alt": "CertificateOfService",
                     "text": "Certificate of Service"
                 }
             ]
@@ -178,7 +192,7 @@
             "title": "Bsc Computer Science and Informatics",
             "image": "assets/images/company/UJ.png",
             "imageAlt": "University of Johannesburg",
-            "timePeriodText": "2013 – 2016",
+            "timePeriodText": "2013 - 2016",
             "timePeriodTextAlt": "4 Years",
             "timePeriodClass": "label-uj",
             "content": "4 Year degree, BSCIT Extended degree.",
@@ -188,7 +202,7 @@
             "title": "Assistant / Tutor",
             "image": "assets/images/company/UJ.png",
             "imageAlt": "University of Johannesburg",
-            "timePeriodText": "February 2014 – July 2014",
+            "timePeriodText": "February 2014 - July 2014",
             "timePeriodTextAlt": "6 months",
             "timePeriodClass": "label-uj",
             "content": "My responsibilities included helping students find the resources they required to complete their weekly practical assignments. Give advice on their practicals and to not do the practicals for them",
@@ -233,10 +247,180 @@
     ],
     "projects": [
         {
+            "title": "Rabobank TAS",
+            "company": "Entelect",
+            "image": "assets/images/company/rabobankAlt.png",
+            "imageTile": "assets/images/company/rabobank.png",
+            "imageAlt": "Rabobank",
+            "timePeriodText": "December 2021 - Present",
+            "timePeriodTextAlt": "Current project",
+            "timePeriodClass": "label-rabobank",
+            "timePeriodColour": "#ff6600",
+            "timePeriodTextColour": "#FFFFFF",
+            "content": "My first project in the Netherlands! I joined team Atlas within TAS, to help build software to monitor all the Azure DevOps projects within Rabobank as well as automate the process of migrating 1900+ projects to around 30 projects, merging many of the teams into Tribes, Chapters, Areas and Squads. Within this team we make use of a lot of Azure services, CLIs, SDKs, etc to automate tasks that would take a lot of time away from the many teams",
+            "location": "Utrecht, The Netherlands",
+            "isSideProject": false,
+            "techUsed": [
+                {
+                    "id": "dotNetCore",
+                    "description": "Many of the tools we built made use of the latest .Net Core versions"
+                },
+                {
+                    "id": "azure",
+                    "description": "Our apps are hosted in Azure App Services and a lot of the functionality of our tools make use of or call Azure services"
+                },
+                {
+                    "id": "azdevops",
+                    "description": "We make use of Azure DevOps to build and release our software. We also make use of pipelines alter "
+                },
+                {
+                    "id": "azdevopsapi",
+                    "description": "Our team makes use of the Azure DevOps API to do multiple operations such as moving WorkItems, Migrating Git Repositories, pipelines, etc"
+                }
+            ]
+        },
+        {
+            "title": "AssistantApps",
+            "image": "assets/images/company/AssistantApps.png",
+            "imageAlt": "AssistantApps",
+            "timePeriodText": "August 2020 - Present",
+            "timePeriodTextAlt": "Ongoing",
+            "timePeriodClass": "label-kurt",
+            "timePeriodColour": "#505050",
+            "timePeriodTextColour": "#FFFFFF",
+            "content": "After building the Assistant for Scrap Mechanic I realised that there was a lot of functionality that was shared between is and the Assistant for No Man's Sky. I created a common library in Dart to write shared functionality once and have it be reused across the different apps as well as having a central API for common functionality. I hope to continue expanding the number of apps that fall under the AssistantApps brand! 💪",
+            "isSideProject": true,
+            "techUsed": [
+                {
+                    "id": "dotNetCore",
+                    "description": "DotNet Core API using .Net5, EntityFrameworkCore and Swagger Docs. This API is the central API for all the apps that belong to the AssistantApps range."
+                },
+                {
+                    "id": "flutter",
+                    "description": "Common functionalities between the AssistantApps placed in a Dart library"
+                },
+                {
+                    "id": "react",
+                    "description": "A tools page for users to be able to help with translations and other aspects of the apps."
+                },
+                {
+                    "id": "angular",
+                    "description": "Admin web pages were built using Angular to edit data on the API"
+                },
+                {
+                    "id": "signalr",
+                    "description": "I used SignalR for certain actions such as a custom OAuth login for Patrons"
+                },
+                {
+                    "id": "azdevops",
+                    "description": "Complete CI and CD pipelines for all the websites and services with automated unit tests."
+                },
+                {
+                    "id": "redis",
+                    "description": "Used to cache data that is repeatedly fetched from the database as well as to sync data between the API and custom services."
+                },
+                {
+                    "id": "swagger",
+                    "description": "Used to make a beautiful looking API documentation page with details on how the requests should be formed, what kind of errors to expect and more"
+                },
+                {
+                    "id": "sass",
+                    "description": "Styled using SCSS"
+                }
+            ],
+            "links": [
+                {
+                    "url": "https://assistantapps.com",
+                    "alt": "AssistantApps Website",
+                    "text": "Website"
+                },
+                {
+                    "url": "https://github.com/AssistantApps",
+                    "alt": "AssistantApps Github",
+                    "text": "Github"
+                },
+                {
+                    "url": "https://tools.assistantapps.com",
+                    "alt": "AssistantApps Translation Tool",
+                    "text": "Translation tool"
+                },
+                {
+                    "url": "https://stream.assistantapps.com",
+                    "alt": "AssistantApps Stream Toys",
+                    "text": "Streaming Tools"
+                },
+                {
+                    "url": "https://admin.assistantapps.com",
+                    "alt": "AssistantApps Admin",
+                    "text": "Admin page"
+                }
+            ]
+        },
+        {
+            "title": "Assistant for Scrap Mechanic",
+            "image": "assets/images/company/ScrapMechanic.png",
+            "imageAlt": "ScrapMechanicAssistant",
+            "timePeriodText": "August 2020 - Present",
+            "timePeriodTextAlt": "Ongoing - sporadic updates",
+            "timePeriodClass": "label-kurt",
+            "timePeriodColour": "#505050",
+            "timePeriodTextColour": "#FFFFFF",
+            "content": "After the success of the Assistant for No Man's Sky I wanted to try building another app making use of all the knowledge I had gained and try to do some aspects of the apps better. This was also a way for me to experiment with Flutter for Web. This app did not have the same amount of success as the Assistant for No Man's Sky, but I learned a lot and now I have an example of how to do a Flutter app that is responsive on Mobile, Tablet and Desktop screens!",
+            "isSideProject": true,
+            "techUsed": [
+                {
+                    "id": "dotNetCore",
+                    "description": "DotNet Core API using .Net5, EntityFrameworkCore and Swagger Docs"
+                },
+                {
+                    "id": "flutter",
+                    "description": "Android and iOS app built using Flutter"
+                },
+                {
+                    "id": "pwa",
+                    "description": "I made use of PWA so that people could \"install\" the Flutter web app. It also helps with caching"
+                },
+                {
+                    "id": "azdevops",
+                    "description": "The API makes use of Azure DevOps for CI and CD."
+                },
+                {
+                    "id": "codemagic",
+                    "description": "Complete CI and CD pipelines for the Android and iOS apps are automated"
+                },
+                {
+                    "id": "swagger",
+                    "description": "Used to make a beautiful looking API documentation page with details on how the requests should be formed, what kind of errors to expect and more"
+                }
+            ],
+            "links": [
+                {
+                    "url": "https://play.google.com/store/apps/details?id=com.kurtlourens.scrap_mechanic",
+                    "alt": "Google Play Store Scrap Mechanic",
+                    "text": "Google Play Store"
+                },
+                {
+                    "url": "https://apps.apple.com/us/app/id1519215611",
+                    "alt": "Apple App Store Scrap Mechanic",
+                    "text": "Apple App Store"
+                },
+                {
+                    "url": "https://scrapassistant.com",
+                    "alt": "Scrap Mechanic Website",
+                    "text": "Website"
+                },
+                {
+                    "url": "https://github.com/AssistantSMS",
+                    "alt": "Scrap Mechanic Github",
+                    "text": "Github"
+                }
+            ]
+        },
+        {
             "title": "Assistant for No Man's Sky",
             "image": "assets/images/company/NoMansSky.png",
             "imageAlt": "NoMansSkyAssistant",
-            "timePeriodText": "Jul 2019 - Present",
+            "timePeriodText": "July 2019 - Present",
             "timePeriodTextAlt": "Ongoing - Weekly updates",
             "timePeriodClass": "label-kurt",
             "timePeriodColour": "#505050",
@@ -261,6 +445,10 @@
                     "description": "Admin web pages were built using Angular to edit data on the API"
                 },
                 {
+                    "id": "redux",
+                    "description": "I used both the Dart and Javascript versions of Redux to maintain state across the different apps"
+                },
+                {
                     "id": "azdevops",
                     "description": "Complete CI and CD pipelines for all the websites and services with automated unit tests."
                 },
@@ -269,39 +457,48 @@
                     "description": "Complete CI and CD pipelines for the Android and iOS apps are automated"
                 },
                 {
+                    "id": "redis",
+                    "description": "Used to cache data that is repeatedly fetched from the database as well as to sync data between the API and custom services."
+                },
+                {
                     "id": "swagger",
                     "description": "Used to make a beautiful looking API documentation page with details on how the requests should be formed, what kind of errors to expect and more"
+                },
+                {
+                    "id": "sass",
+                    "description": "Styled using SCSS"
                 }
             ],
             "links": [
                 {
                     "url": "https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes",
-                    "alt": "GooglePlayStoreNoMansSky",
+                    "alt": "Google Play Store No Mans Sky",
                     "text": "Google Play Store"
                 },
                 {
                     "url": "https://apps.apple.com/us/app/id1480287625",
-                    "alt": "AppleAppStoreNoMansSky",
+                    "alt": "Apple App Store No Mans Sky",
                     "text": "Apple App Store"
                 },
                 {
                     "url": "https://nmsassistant.com",
-                    "alt": "NoMansSkyWebsite",
+                    "alt": "No Mans Sky Website",
                     "text": "Website"
                 },
                 {
                     "url": "https://nmsassistant.com",
-                    "alt": "NoMansSkyYoutube",
+                    "alt": "No Mans Sky Youtube",
                     "text": "Youtube"
                 }
             ]
         },
         {
             "title": "BEE123",
+            "company": "Entelect",
             "image": "assets/images/company/BEE123.png",
             "imageAlt": "BEE123",
-            "timePeriodText": "April 2019 – Present",
-            "timePeriodTextAlt": "Ongoing - Client project",
+            "timePeriodText": "April 2019 - December 2021",
+            "timePeriodTextAlt": "2 years, 3 months",
             "timePeriodClass": "label-bee123",
             "timePeriodColour": "#227FDC",
             "timePeriodTextColour": "#FFFFFF",
@@ -311,6 +508,10 @@
                 {
                     "id": "dotNetFrame",
                     "description": "This project had a lot of legacy code written in .Net Framework"
+                },
+                {
+                    "id": "dotNetCore",
+                    "description": "Our project had a lot of legacy code and is monolithic. As we continued to maintain and add features, we broke some parts out in smaller more manageable pieces using more up to date technologies"
                 },
                 {
                     "id": "durandal",
@@ -327,6 +528,14 @@
                 {
                     "id": "azdevops",
                     "description": "With my knowledge from previous projects I helped move the solution to Azure DevOps."
+                },
+                {
+                    "id": "signalr",
+                    "description": "We used SignalR for actions that block the user from using the site for too long. So instead we allow the users to continue using the site and notify them when the action has been completed"
+                },
+                {
+                    "id": "sass",
+                    "description": "Styled using SCSS and LESS"
                 },
                 {
                     "id": "wordpress",
@@ -351,7 +560,7 @@
             "image": "assets/images/company/Flutter.png",
             "imageAlt": "KurtLourens",
             "timePeriodText": "March 2019 - April 2019",
-            "timePeriodTextAlt": "1 Month",
+            "timePeriodTextAlt": "1 month",
             "timePeriodClass": "label-kurt",
             "timePeriodColour": "#505050",
             "timePeriodTextColour": "#FFFFFF",
@@ -374,7 +583,7 @@
             "links": [
                 {
                     "url": "https://play.google.com/store/apps/details?id=com.kurt_lourens_cv",
-                    "alt": "GooglePlayStoreKurtsCVApp",
+                    "alt": "Google Play Store Kurt's CV App",
                     "text": "View on Google Play Store"
                 }
             ]
@@ -383,7 +592,7 @@
             "title": "BTS Portal",
             "image": "assets/images/company/BTS.png",
             "imageAlt": "BTS",
-            "timePeriodText": "February 2019 – Present",
+            "timePeriodText": "February 2019 - Present",
             "timePeriodTextAlt": "Completed by end of 2019 - Only offering support",
             "timePeriodClass": "label-bts",
             "timePeriodColour": "#227FDC",
@@ -406,6 +615,10 @@
                 {
                     "id": "arduino",
                     "description": "The data for the front end was being sent via TCP connections from Arduino devices hooked up to client's cellphone towers. We needed to have an understanding of how these devices would send the data based on which model was transmitting the data"
+                },
+                {
+                    "id": "sass",
+                    "description": "Styled using SCSS"
                 }
             ],
             "links": [
@@ -418,25 +631,52 @@
         },
         {
             "title": "Hollard Easy4Business",
+            "company": "Entelect",
             "image": "assets/images/company/Hollard.png",
             "imageAlt": "Hollard",
             "darkModeImage": "assets/images/company/HollardAlt.png",
-            "timePeriodText": "January 2019 – March 2019",
-            "timePeriodTextAlt": "3 Months",
+            "timePeriodText": "January 2019 - March 2019",
+            "timePeriodTextAlt": "3 months",
             "timePeriodClass": "label-hollard",
             "timePeriodColour": "#4D2B6B",
             "timePeriodTextColour": "#FFFFFF",
             "content": "While I was working on the CQT team, a new project was started called Easy4Business. Which was formed from some of CQT's members. CQT shared knowledge and helped set up Easy4Business. I mainly helped in setting up their CI / CD and using Typescript and Redux as I had learned a lot about these from my home projects. I learned a lot about starting projects on the right foot.",
             "location": "Johannesburg, South Africa",
-            "isSideProject": false
+            "isSideProject": false,
+            "techUsed": [
+                {
+                    "id": "dotNetCore",
+                    "description": "DotNet Core API using DotNet Core 2."
+                },
+                {
+                    "id": "react",
+                    "description": "This project's React app made use of some of the React components built in CQT."
+                },
+                {
+                    "id": "typescript",
+                    "description": "From my experience with CQT and side projects, I started this on the right foot with Typescript"
+                },
+                {
+                    "id": "redux",
+                    "description": "From my experience with CQT and side projects, I started this on the right foot with Redux"
+                },
+                {
+                    "id": "formik",
+                    "description": "Due to us needing to handle many forms, we decided to make use of this library to help us manage all the inputs, validations and conditional forms"
+                },
+                {
+                    "id": "sass",
+                    "description": "Styled using SCSS"
+                }
+            ]
         },
         {
             "title": "RemoteConfigs",
             "image": "assets/images/company/RemoteConfigs.png",
             "imageAlt": "KurtLourens",
             "darkModeImage": "assets/images/company/RemoteConfigsAlt.png",
-            "timePeriodText": "July 2018 – Present",
-            "timePeriodTextAlt": "Completed in 2018 - Only maintainance work now",
+            "timePeriodText": "July 2018 - December 2019",
+            "timePeriodTextAlt": "1 year, 5 months - still in use",
             "timePeriodClass": "label-remoteconfigs",
             "timePeriodColour": "#45BB89",
             "timePeriodTextColour": "#FFFFFF",
@@ -460,8 +700,16 @@
                     "description": "I created a NPM package so that users can integrate with the API quickly and easily"
                 },
                 {
+                    "id": "gulp",
+                    "description": "Gulp was used to bundle up the Javascript and generate the CSS from the SCSS files"
+                },
+                {
                     "id": "azdevops",
                     "description": "All building, staging and releasing is automated with Azure DevOps"
+                },
+                {
+                    "id": "sass",
+                    "description": "Styled using SCSS"
                 }
             ],
             "links": [
@@ -477,7 +725,7 @@
             "image": "assets/images/company/CAH.png",
             "imageAlt": "CAH",
             "timePeriodText": "June 2018 - July 2018",
-            "timePeriodTextAlt": "1 Month",
+            "timePeriodTextAlt": "1 month",
             "timePeriodClass": "label-kurt",
             "timePeriodColour": "#505050",
             "timePeriodTextColour": "#FFFFFF",
@@ -499,12 +747,20 @@
                 {
                     "id": "azdevops",
                     "description": "All building, staging and releasing is automated with Azure DevOps"
+                },
+                {
+                    "id": "pwa",
+                    "description": "This site can be installed to a mobile device's home screen"
+                },
+                {
+                    "id": "sass",
+                    "description": "Styled using SCSS"
                 }
             ],
             "links": [
                 {
                     "url": "https://cah.kurtlourens.com",
-                    "alt": "KurtLourensCardsAgainstHumanity",
+                    "alt": "Kurt Lourens Cards Against Humanity",
                     "text": "cah.kurtlourens.com"
                 }
             ]
@@ -514,79 +770,210 @@
             "image": "assets/images/company/Monitor.png",
             "imageAlt": "BuildMonitor",
             "timePeriodText": "March 2018 - December 2019",
-            "timePeriodTextAlt": "1 year, 9 months - Still in use",
+            "timePeriodTextAlt": "1 year, 9 months - still in use",
             "timePeriodClass": "label-kurt",
             "timePeriodColour": "#505050",
             "timePeriodTextColour": "#FFFFFF",
             "content": "While I was working on the CQT team, we had a Raspberry PI that was our build monitor. It was just running the VSTS (at the time, now Azure Devops) dashboard. However the PI would often become overwhelmed and the web page would go into not responding (we theorised that the dashboard webpage was just to heavy). I created an AngularJS app to serve as our build monitor. Eventually I recreated it in Angular 6. Ever since then our team's PI has been happily trudging along.",
             "isSideProject": true,
+            "techUsed": [
+                {
+                    "id": "dotNetCore",
+                    "description": "DotNet Core API using DotNet Core. Later upgraded to DotNet Core 2 and even later DotNet Core 3"
+                },
+                {
+                    "id": "angular",
+                    "description": "This project was built with Angular 5"
+                },
+                {
+                    "id": "azdevops",
+                    "description": "All building, staging and releasing is automated with Azure DevOps"
+                },
+                {
+                    "id": "pwa",
+                    "description": "This site can be installed to a mobile device's home screen"
+                },
+                {
+                    "id": "sass",
+                    "description": "Styled using SCSS"
+                }
+            ],
             "links": [
                 {
                     "url": "https://monitor.kurtlourens.com",
-                    "alt": "KurtLourensBuildMonitor",
+                    "alt": "Kurt Lourens Build Monitor",
                     "text": "monitor.kurtlourens.com"
                 }
             ]
         },
         {
             "title": "BTS Site Status",
+            "company": "BTSRA",
             "image": "assets/images/company/BTS.png",
             "imageAlt": "BTS",
-            "timePeriodText": "March 2018 – October 2018",
-            "timePeriodTextAlt": "8 Months",
+            "timePeriodText": "March 2018 - October 2018",
+            "timePeriodTextAlt": "8 months",
             "timePeriodClass": "label-bts",
             "timePeriodColour": "#227FDC",
             "timePeriodTextColour": "#FFFFFF",
             "content": "BTS was a small project which showed the status of cellphone towers in South Africa. BTS had about 300 devices with a range of meters each, that were attached to cellphone towers across South Africa. Each of these devices would inform PnPScada what the tower's voltage, amps, electricity usage, etc were. Myself and Morné created a .Net Core Api with an AngularJS front-end to display this data to BTS clients who wanted to know how much electricity their towers were using as well as the last time the specific tower was 'online'.",
             "location": " ̶p̶o̶r̶t̶a̶l̶.̶b̶t̶s̶r̶a̶.̶c̶o̶.̶z̶a̶",
-            "isSideProject": true
+            "isSideProject": true,
+            "techUsed": [
+                {
+                    "id": "dotNetCore",
+                    "description": "DotNet Core API using DotNet Core"
+                },
+                {
+                    "id": "angular",
+                    "description": "This project was built with AngularJS"
+                },
+                {
+                    "id": "gulp",
+                    "description": "Gulp was used to bundle up the Javascript and generate the CSS from the SCSS files"
+                },
+                {
+                    "id": "azdevops",
+                    "description": "All building, staging and releasing is automated with Azure DevOps"
+                },
+                {
+                    "id": "pwa",
+                    "description": "This site can be installed to a mobile device's home screen"
+                },
+                {
+                    "id": "sass",
+                    "description": "Styled using SCSS"
+                }
+            ]
         },
         {
             "title": "KhaozNet IoT",
             "image": "assets/images/company/IoT.png",
             "imageAlt": "IoT",
             "darkModeImage": "assets/images/company/IoTAlt.png",
-            "timePeriodText": "February 2018 – Present",
+            "timePeriodText": "February 2018 - Present",
             "timePeriodTextAlt": "Ongoing - Rarely update, using it everyday",
             "timePeriodClass": "label-iot",
             "timePeriodColour": "#505050",
             "timePeriodTextColour": "#FFFFFF",
             "content": "In the beginning of 2018 I attended an [entelect] Makers Club, it instantly sparked my interest in Arduino. It felt like a whole new world had been opened up for me, one where my software could affect the real world. Since then I have made quite a few Arduino contraptions, such as hooking up a Garage Remote so that I can open my garage from my app, from anywhere in the world. My garden has sensors for Temperature, Humidity, Soil Moisture and the ability to switch the water on and off (which I plan to automate in the future).",
-            "contentHtml": "<p>In the beginning of 2018 I attended an&nbsp;<strong><a href=\"http://www.entelect.co.za\" class=\"color-entelect\" target=\"_blank\" rel=\"noopener\" title=\"entelect\" alt=\"entelect\">Entelect</a></strong>&nbsp;Makers Club, it instantly sparked my interest in Arduino. It felt like a whole new world had been opened up for me, one where my software could affect the real world. Since then I have made quite a few Arduino contraptions, such as hooking up a Garage Remote so that I can open my garage from my app, from anywhere in the world. My garden has sensors for Temperature, Humidity, Soil Moisture and the ability to switch the water on and off (which I plan to automate in the future).<p>",
             "isSideProject": true,
+            "techUsed": [
+                {
+                    "id": "dotNetCore",
+                    "description": "DotNet Core API using DotNet Core"
+                },
+                {
+                    "id": "angular",
+                    "description": "This project was built with AngularJS originally and later rewritten using Angular 5"
+                },
+                {
+                    "id": "arduino",
+                    "description": "This solution made use of small ESP32 devices to control specific actions like opening my garage, measure soil humidity, water the garden, etc"
+                },
+                {
+                    "id": "azdevops",
+                    "description": "All building, staging and releasing is automated with Azure DevOps"
+                },
+                {
+                    "id": "pwa",
+                    "description": "This site can be installed to a mobile device's home screen"
+                },
+                {
+                    "id": "sass",
+                    "description": "This was my first interaction with SCSS and from this project onwards I used it on as many projects as I could"
+                }
+            ],
             "links": [
                 {
                     "url": "https://iot.khaoznet.xyz",
-                    "alt": "KurtLourensIoT",
+                    "alt": "Kurt Lourens IoT",
                     "text": "iot.khaoznet.xyz"
                 }
             ]
         },
         {
             "title": "Hollard CQT",
+            "company": "Entelect",
             "image": "assets/images/company/Hollard.png",
             "imageAlt": "Hollard",
             "darkModeImage": "assets/images/company/HollardAlt.png",
-            "timePeriodText": "August 2017 – March 2019",
-            "timePeriodTextAlt": "1 year, 7 Months",
+            "timePeriodText": "August 2017 - March 2019",
+            "timePeriodTextAlt": "1 year, 7 months",
             "timePeriodClass": "label-hollard",
             "timePeriodColour": "#4D2B6B",
             "timePeriodTextColour": "#FFFFFF",
             "content": "CQT is an internal system to help Broker Consultants create quotes. We integrated into many services at Hollard. The team had quite a lot of say in the technologies used. The technology stack that we ended up going with (React frontend and C# MVC .Net Framework backend) caused us to spend a lot of time learning (mostly React) and we ended up with quite a bit of technical debt due to time constraints and pressure from business. We were one of the first teams in Hollard to have a fully automated CI / CD pipeline and we set the golden standard on how to do deployments at Hollard. I grew a lot in this project. In the beginning I was the only Junior in the team of 5. As the team grew I was able to take on some more responsibilities. I became known as the 'Senior Grad' up until my promotion to Intermediate Software Engineer.",
             "location": "Johannesburg, South Africa",
-            "isSideProject": false
+            "isSideProject": false,
+            "techUsed": [
+                {
+                    "id": "dotNetFrame",
+                    "description": "Initially the project was set up to be an ASP.Net MVC project with some JQuery but we later built most of the app in React"
+                },
+                {
+                    "id": "react",
+                    "description": "No one on our team had ever used React before, so we were forced to learn very quickly"
+                },
+                {
+                    "id": "semanticui",
+                    "description": "Semantic UI for React kept our project consistent and their documentation was really great"
+                },
+                {
+                    "id": "gulp",
+                    "description": "Gulp was used to bundle up the Javascript and generate the CSS from the SCSS files"
+                },
+                {
+                    "id": "azdevops",
+                    "description": "All building, staging and releasing is automated with Azure DevOps"
+                }
+            ]
         },
         {
             "title": "TennoDex",
             "image": "assets/images/company/TennoDex.png",
             "imageAlt": "TennoDex",
-            "timePeriodText": "July 2017 – August 2019",
-            "timePeriodTextAlt": "2 years, 1 Month",
+            "timePeriodText": "July 2017 - August 2019",
+            "timePeriodTextAlt": "2 years, 1 month",
             "timePeriodClass": "label-tennodex",
             "timePeriodColour": "#7D42DB",
             "timePeriodTextColour": "#FFFFFF",
             "content": "TennoDex has been my longest running side project. It simply consumes a Web Api and displays data, but it's technology stack has grown as I have. TennoDex has been rebuilt from the ground up more than 3 times by now, each time with a new tech stack. Initially TennoDex was a .Net Framework Web Api with an AngularJS front-end, then it was a .Net Core Web Api with an Android App built with Xamarin. Currently TennoDex is a .Net Core Web Api with a ReactJS front-end and an Android App built with React-Native. What makes the latest version special is that the Web App and the Mobile App use the same Typescript objects that are generated by the Web Api as well as sharing the same logic (i.e. mostly only implementing the native presentation layer. For the web: HTML, CSS and Javascript. For Mobile: React Native Components).",
             "isSideProject": true,
+            "techUsed": [
+                {
+                    "id": "angular",
+                    "description": "Originally this website was designed using AngularJS"
+                },
+                {
+                    "id": "react",
+                    "description": "This website was redesigned from AngularJS into React. It was designed in such a way that the logic, API calls, Typescript models and Redux state management could be shared and only the views needed designed for each platform (web and native)"
+                },
+                {
+                    "id": "typescript",
+                    "description": "I used this project to learn how to use Typescript"
+                },
+                {
+                    "id": "redux",
+                    "description": "I used this project to learn how to use Redux. The Redux logic was written in such a way that it could be shared over the different platforms"
+                },
+                {
+                    "id": "azdevops",
+                    "description": "All building, staging and releasing is automated with Azure DevOps"
+                },
+                {
+                    "id": "pwa",
+                    "description": "This site can be installed to a mobile device's home screen"
+                },
+                {
+                    "id": "xamarin",
+                    "description": "Android app built in Xamarin, using Native UI"
+                },
+                {
+                    "id": "react",
+                    "description": "Android app was re-built using React Native"
+                }
+            ],
             "links": [
                 {
                     "url": "https://tennodex.com",
@@ -597,30 +984,24 @@
         },
         {
             "title": "Hollard Customer App",
+            "company": "Entelect",
             "image": "assets/images/company/Hollard.png",
             "imageAlt": "Hollard",
             "darkModeImage": "assets/images/company/HollardAlt.png",
-            "timePeriodText": "March 2017 – July 2017",
-            "timePeriodTextAlt": "5 Months",
+            "timePeriodText": "March 2017 - July 2017",
+            "timePeriodTextAlt": "5 months",
             "timePeriodClass": "label-hollard",
             "timePeriodColour": "#4D2B6B",
             "timePeriodTextColour": "#FFFFFF",
             "content": "I joined a team at Hollard Insurance in Parktown North, where I worked on their Customer App built with Xamarin. It was quite a tough fit as I did not have any real experience with Xamarin. This move was only temporary, as Hollard wanted me for a project that was to start soon after I joined. I learned a lot from working on that team and it sparked an interest in App Development. I went on to create the first version of TennoDex (Xamarin app with a C# .Net Core Api backend) in my spare time using what I had learned.",
             "location": "Johannesburg, South Africa",
-            "isSideProject": false
-        },
-        {
-            "title": "Allan Grey FAIFA",
-            "image": "assets/images/company/Entelect.png",
-            "imageAlt": "Entelect",
-            "timePeriodText": "February 2017",
-            "timePeriodTextAlt": "1 Month",
-            "timePeriodClass": "label-entelect",
-            "timePeriodColour": "#505050",
-            "timePeriodTextColour": "#FFFFFF",
-            "content": "After completing [entelect]'s Grad Bootcamp, I joined the team working on Allan Grey's FAIFA (Find An Independent Financial Advisor). It was my first introduction to React and Redux. My team mates were very experienced in the technologies used and I learned a lot.",
-            "location": "Johannesburg, South Africa",
-            "isSideProject": false
+            "isSideProject": false,
+            "techUsed": [
+                {
+                    "id": "xamarin",
+                    "description": "Android and iOS apps built in Xamarin, using Native UI"
+                }
+            ]
         }
     ],
     "tech": {
@@ -680,6 +1061,10 @@
             "name": "Azure DevOps",
             "img": "azurePipelines.svg"
         },
+        "azdevopsapi": {
+            "name": "Azure DevOps REST API",
+            "img": "azureDevOpsApi.png"
+        },
         "nodejs": {
             "name": "NodeJS",
             "img": "nodejs.svg"
@@ -695,6 +1080,42 @@
         "codemagic": {
             "name": "CodeMagic.io",
             "img": "codeMagic.png"
+        },
+        "arduino": {
+            "name": "Arduino",
+            "img": "arduino.svg"
+        },
+        "formik": {
+            "name": "Formik",
+            "img": "formik.svg"
+        },
+        "redux": {
+            "name": "Redux",
+            "img": "redux.svg"
+        },
+        "sass": {
+            "name": "SASS",
+            "img": "sass.svg"
+        },
+        "xamarin": {
+            "name": "Xamarin",
+            "img": "xamarin.svg"
+        },
+        "reactnative": {
+            "name": "React Native",
+            "img": "reactnative.svg"
+        },
+        "semanticui": {
+            "name": "Semantic UI",
+            "img": "semantic-ui.svg"
+        },
+        "redis": {
+            "name": "Redis",
+            "img": "redis.svg"
+        },
+        "signalr": {
+            "name": "SignalR",
+            "img": "signalr.png"
         }
     }
 }
