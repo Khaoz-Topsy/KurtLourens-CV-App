@@ -1,0 +1,1 @@
+Fix AppCenter crashing due to older Android setup
