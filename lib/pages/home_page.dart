@@ -7,9 +7,7 @@ import '../components/adaptive/homepage_appbar.dart';
 import '../components/drawer.dart';
 import '../components/scaffoldTemplates/generic_page_scaffold.dart';
 import '../constants/app_image.dart';
-import '../constants/app_routes.dart';
 import '../constants/homepage_items.dart';
-import '../constants/staggered_grid_item_type.dart';
 import '../contracts/homepage_menu_item.dart';
 import '../helper/column_helper.dart';
 
@@ -19,37 +17,6 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var allItems = [
-      ...getMenuOptionsSection1(
-        context,
-        drawerIconColour,
-      ),
-    ];
-
-    var gridItems = [
-      StaggeredGridItem(
-        childBuilder: (BuildContext childContext) =>
-            homepageMenuItemGridPresenter(
-          context,
-          HomepageMenuItem(
-            image: getListTileImage(AppImage.windowIcon, size: imageSize),
-            title: 'Test',
-            navigateToNamed: Routes.home,
-          ),
-        ),
-        gridItemType: StaggeredGridItemType.smallRectLandscapeXLong,
-      ),
-      ...(allItems
-          .map(
-            (menuItem) => StaggeredGridItem(
-              childBuilder: (BuildContext childContext) =>
-                  homepageMenuItemGridPresenter(context, menuItem),
-              gridItemType: const StaggeredTile.count(8, 1),
-            ),
-          )
-          .toList()),
-    ];
-
     return basicGenericPageScaffold(
       context,
       appBar: homePageAppBar('Home'),
@@ -59,6 +26,12 @@ class Homepage extends StatelessWidget {
         child: BreakpointBuilder(
           builder: (BuildContext innerContext, Breakpoint breakpoint) {
             int numCols = getHomepageColumnCount(breakpoint);
+            List<StaggeredGridItem> gridItems = getGridItems(
+              innerContext,
+              drawerIconColour,
+              numCols,
+            );
+
             return StaggeredGridView.countBuilder(
               key: Key("staggeredGrid-col-$numCols"),
               crossAxisCount: numCols,
@@ -76,6 +49,72 @@ class Homepage extends StatelessWidget {
     );
   }
 }
+
+List<StaggeredGridItem> getGridItems(
+  BuildContext innerContext,
+  Color drawerIconColour,
+  int numCols,
+) =>
+    [
+      StaggeredGridItem(
+        childBuilder: (BuildContext childContext) => Card(
+          child: Row(
+            children: [
+              localImage(
+                AppImage.avatar,
+                boxfit: BoxFit.fitHeight,
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(4),
+                  bottomLeft: Radius.circular(4),
+                ),
+              ),
+              emptySpace(2),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Kurt Lourens',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  const Text(
+                    'Senior Software Engineer',
+                    maxLines: 2,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+        gridItemType: StaggeredTile.count((numCols - 2), 1.25),
+      ),
+      StaggeredGridItem(
+        childBuilder: (BuildContext childContext) => const Card(
+          child: Center(
+            child: Icon(Icons.question_mark),
+          ),
+        ),
+        gridItemType: const StaggeredTile.count(2, 1.25),
+      ),
+      StaggeredGridItem(
+        childBuilder: (BuildContext childContext) => Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [genericItemName('Work Experience')],
+        ),
+        gridItemType: StaggeredTile.count(numCols, 0.5),
+      ),
+      ...(getMenuOptionsSection1(innerContext, drawerIconColour)
+          .map(
+            (menuItem) => StaggeredGridItem(
+              childBuilder: (BuildContext childContext) =>
+                  homepageMenuItemGridPresenter(childContext, menuItem),
+              gridItemType: const StaggeredTile.count(8, 1),
+            ),
+          )
+          .toList()),
+    ];
 
 Widget homepageMenuItemGridPresenter(
   BuildContext context,
