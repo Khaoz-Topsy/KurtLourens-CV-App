@@ -55,10 +55,10 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "282b1fe104a4ad7cc366695c53a95b0d4fe69098"
+      resolved-ref: "86eabefa4bd4697e27f4d2fe49c2af038014924e"
       url: "https://github.com/AssistantApps/Flutter.Common.git"
     source: git
-    version: "0.1.70"
+    version: "0.1.72"
   async:
     dependency: transitive
     description:
