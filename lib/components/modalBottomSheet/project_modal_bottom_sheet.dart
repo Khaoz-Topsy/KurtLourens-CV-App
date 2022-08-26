@@ -22,7 +22,6 @@ class ProjectBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Widget Function()> widgets = [];
 
-    widgets.add(() => emptySpace1x());
     widgets.add(
       () => localImage(
         getCvIcon(proj.image, proj.darkModeImage, ''),
@@ -106,13 +105,16 @@ class ProjectBottomSheet extends StatelessWidget {
 
     return AnimatedSize(
       duration: AppDuration.modal,
-      child: Container(
-        constraints: modalDefaultSize(context),
-        child: ListView.builder(
-          padding: const EdgeInsets.all(20),
-          itemCount: widgets.length,
-          itemBuilder: (_, int index) => widgets[index](),
-          shrinkWrap: true,
+      child: animateWidgetIn(
+        duration: AppDuration.modal,
+        child: Container(
+          constraints: modalDefaultSize(context),
+          child: ListView.builder(
+            padding: const EdgeInsets.all(20),
+            itemCount: widgets.length,
+            itemBuilder: (_, int index) => widgets[index](),
+            shrinkWrap: true,
+          ),
         ),
       ),
     );

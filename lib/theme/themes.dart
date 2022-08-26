@@ -9,7 +9,7 @@ ThemeData getDynamicTheme(Brightness brightness) {
 ThemeData darkTheme() {
   final base = ThemeData.dark();
   final primary = Colors.blue[300];
-  final secondary = Colors.yellow[200];
+  final secondary = Colors.green[300];
   return base.copyWith(
     primaryColor: primary,
     // accentColor: secondary, //DEPRECATED

@@ -27,7 +27,6 @@ class AboutPage extends StatelessWidget {
           CvDetail details = result.value.details;
           List<Widget Function()> widgets = [];
 
-          widgets.add(() => emptySpace1x());
           widgets.add(
             () => localImage(
               AppImage.avatar,

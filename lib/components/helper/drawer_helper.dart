@@ -1,4 +1,5 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
+import 'package:assistantapps_flutter_common/contracts/misc/versionDetail.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/homepage_items.dart';
@@ -8,26 +9,36 @@ List<Widget> getDrawerItems(context) {
   List<Widget> widgets = List.empty(growable: true);
   Color drawerIconColour = getTheme().getDarkModeSecondaryColour();
 
+  widgets.add(emptySpace(0.5));
   widgets.addAll(_mapToDrawerItem(
     context,
     getMenuOptionsSection1(context, drawerIconColour),
   ));
   widgets.add(customDivider());
 
-  // widgets.add(_drawerItem(
-  //   context,
-  //   image: getListTileImage(AppImage.assistantApps),
-  //   key: LocaleKey.assistantApps,
-  //   onTap: (_) {
-  //     adaptiveBottomModalSheet(
-  //       context,
-  //       hasRoundedCorners: true,
-  //       builder: (BuildContext innerC) => AssistantAppsModalBottomSheet(
-  //         appType: AssistantAppType.NMS,
-  //       ),
-  //     );
-  //   },
-  // ));
+  widgets.add(
+    FutureBuilder<ResultWithValue<VersionDetail>>(
+      future: getUpdate().getPackageInfo(),
+      builder: (BuildContext context,
+          AsyncSnapshot<ResultWithValue<VersionDetail>> snapshot) {
+        Widget? errorWidget = asyncSnapshotHandler(context, snapshot,
+            loader: () => getLoading().loadingIndicator());
+        if (errorWidget != null) return Container();
+
+        ResultWithValue<VersionDetail>? packageInfoResult = snapshot.data;
+        String appVersionString =
+            'Version: ${packageInfoResult?.value.version}';
+
+        return ListTile(
+          key: const Key('versionNumber'),
+          leading: getCorrectlySizedImageFromIcon(context, Icons.code),
+          title: Text(appVersionString),
+          onTap: () {},
+          dense: true,
+        );
+      },
+    ),
+  );
   widgets.add(emptySpace3x());
 
   return widgets;

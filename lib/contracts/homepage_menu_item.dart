@@ -13,4 +13,4 @@ class HomepageMenuItem {
   });
 }
 
-const double imageSize = 52;
+const double imageSize = 37;
