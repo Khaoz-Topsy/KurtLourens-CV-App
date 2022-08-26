@@ -1011,7 +1011,7 @@
         },
         "dotNetCore": {
             "name": "DotNet Core",
-            "img": "dotnetCore.svg"
+            "img": "dotnetCore.png"
         },
         "cSharp": {
             "name": "C#",
@@ -1071,7 +1071,7 @@
         },
         "pwa": {
             "name": "PWA",
-            "img": "pwa.svg"
+            "img": "pwa.png"
         },
         "npm": {
             "name": "NPM",
