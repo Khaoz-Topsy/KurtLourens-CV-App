@@ -12,7 +12,7 @@ Widget projectExperienceGridTilePresenter(
   CvDataProject proj,
   CvDataTech techLookup,
 ) {
-  return experienceGridTilePresenter(
+  return ExperienceGridTilePresenter(
     image: localImage(
       getCvIcon(proj.image, proj.darkModeImage, proj.imageTile),
       imageHero: proj.title,
