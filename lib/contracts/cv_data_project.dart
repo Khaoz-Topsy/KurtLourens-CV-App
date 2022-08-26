@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 
 import 'cv_data_link.dart';
+import 'cv_data_tech_used.dart';
 
 class CvDataProject {
   String title;
@@ -16,6 +17,7 @@ class CvDataProject {
   String timePeriodTextColour;
   String content;
   List<CvDataLink> links;
+  List<CvDataTechUsed> techUsed;
   String darkModeImage;
   String location;
   String contentHtml;
@@ -32,6 +34,7 @@ class CvDataProject {
     required this.timePeriodTextColour,
     required this.content,
     required this.links,
+    required this.techUsed,
     required this.darkModeImage,
     required this.location,
     required this.contentHtml,
@@ -53,8 +56,13 @@ class CvDataProject {
         content: readStringSafe(json, 'content'),
         links: readListSafe(
           json,
-          'buttons',
+          'links',
           (jsonItem) => CvDataLink.fromJson(jsonItem),
+        ),
+        techUsed: readListSafe(
+          json,
+          'techUsed',
+          (jsonItem) => CvDataTechUsed.fromJson(jsonItem),
         ),
         darkModeImage: readStringSafe(json, 'darkModeImage'),
         location: readStringSafe(json, 'location'),

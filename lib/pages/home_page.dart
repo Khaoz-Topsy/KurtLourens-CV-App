@@ -119,7 +119,7 @@ List<StaggeredGridItem> getGridItems(
             (cvItem) => StaggeredGridItem(
               childBuilder: (BuildContext childContext) =>
                   workExperienceGridTilePresenter(childContext, cvItem),
-              gridItemType: const StaggeredTile.count(8, 1),
+              gridItemType: const StaggeredTile.count(8, 1.3),
             ),
           )
           .toList()),
@@ -129,8 +129,12 @@ List<StaggeredGridItem> getGridItems(
           .map(
             (cvItem) => StaggeredGridItem(
               childBuilder: (BuildContext childContext) =>
-                  projectExperienceGridTilePresenter(cvItem),
-              gridItemType: const StaggeredTile.count(8, 1),
+                  projectExperienceGridTilePresenter(
+                childContext,
+                cvItem,
+                cvData.tech,
+              ),
+              gridItemType: const StaggeredTile.count(8, 1.3),
             ),
           )
           .toList()),

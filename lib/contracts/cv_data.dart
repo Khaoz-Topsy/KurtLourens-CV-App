@@ -9,6 +9,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'cv_data_detail.dart';
 import 'cv_data_certificate.dart';
 import 'cv_data_project.dart';
+import 'cv_data_tech.dart';
 import 'cv_data_work_experience.dart';
 
 class CvData {
@@ -16,12 +17,14 @@ class CvData {
   List<CvDataWorkExperience> workExperiences;
   List<CvDataCertificate> certificates;
   List<CvDataProject> projects;
+  CvDataTech tech;
 
   CvData({
     required this.details,
     required this.workExperiences,
     required this.certificates,
     required this.projects,
+    required this.tech,
   });
 
   factory CvData.fromRawJson(String str) => CvData.fromJson(json.decode(str));
@@ -43,6 +46,8 @@ class CvData {
           'projects',
           (jsonItem) => CvDataProject.fromJson(jsonItem),
         ),
+        tech: CvDataTech.fromJson(json['tech']),
+        // tech: CvDataTech.fromRawJson('{}'),
       );
 }
 

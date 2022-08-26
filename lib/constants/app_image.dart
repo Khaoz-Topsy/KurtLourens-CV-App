@@ -5,5 +5,7 @@ class AppImage {
   static const String avatar = '${base}avatar.png';
   static const String windowIcon = '${base}windowIcon.png';
 
+  static const String techFolder = '${base}tech/';
+
   static const String unknown = '${base}unknown.png';
 }

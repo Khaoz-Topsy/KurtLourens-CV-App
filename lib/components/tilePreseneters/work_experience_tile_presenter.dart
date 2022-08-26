@@ -7,7 +7,9 @@ import '../modalBottomSheet/work_experience_modal_bottom_sheet.dart';
 import 'experience_tile_presenter.dart';
 
 Widget workExperienceGridTilePresenter(
-    BuildContext context, CvDataWorkExperience wExp) {
+  BuildContext context,
+  CvDataWorkExperience wExp,
+) {
   return experienceGridTilePresenter(
     image: Padding(
       padding: const EdgeInsets.only(left: 4),
@@ -16,9 +18,8 @@ Widget workExperienceGridTilePresenter(
         child: localImage(
           getCvIcon(wExp.image, wExp.darkModeImage, ''),
           boxfit: BoxFit.fitHeight,
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(4),
-            bottomLeft: Radius.circular(4),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(4),
           ),
         ),
       ),
