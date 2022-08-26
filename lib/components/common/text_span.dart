@@ -8,7 +8,10 @@ Widget getTextSpanFromTemplateAndArray(
   int? maxLines,
   TextOverflow? overflow,
 }) {
-  TextStyle defaultStyle = Theme.of(context).textTheme.bodyText1!;
+  TextStyle defaultStyle = Theme.of(context)
+      .textTheme
+      .bodyText1!
+      .copyWith(color: getTheme().getSecondaryColour(context));
   List<String> templateArray = origContent.split(' ');
 
   List<TextSpan> textSpans = List.empty(growable: true);
@@ -35,16 +38,22 @@ Widget getTextSpanFromTemplateAndArray(
   );
 }
 
+int daysBetween(DateTime from, DateTime to) {
+  from = DateTime(from.year, from.month, from.day);
+  to = DateTime(to.year, to.month, to.day);
+  return (to.difference(from).inHours / 24).round();
+}
+
 TextSpan calculateYearsOfWork() {
   DateTime now = DateTime.now();
-  DateTime startedWorkInMilli = DateTime.parse('2017-01-01');
-  Duration difference =
-      (now.timeZoneOffset - startedWorkInMilli.timeZoneOffset);
+  DateTime startedWorkDateTime = DateTime.parse('2017-01-01');
+  final differenceInDays = daysBetween(startedWorkDateTime, now);
 
-  String result = (difference.inDays / 365).toStringAsExponential(0);
-  double monthsInYears = (difference.inDays / 365) % 1;
+  double numYears = (differenceInDays / 365);
+  double monthsInYears = numYears % 1;
+  String result = numYears.floor().toStringAsFixed(0);
   if (monthsInYears > 7.5) {
-    result = ((difference.inDays / 365) + 1).toStringAsExponential(0);
+    result = (numYears + 1).round().toStringAsFixed(0);
   } else if (monthsInYears > 0.1) {
     result += '+';
   }
@@ -93,7 +102,7 @@ TextSpan shortCodesHandler(
     text: text,
     style: TextStyle(
       color: AdaptiveTheme.of(context).mode == AdaptiveThemeMode.dark
-          ? Colors.white60
+          ? Colors.white70
           : Colors.black54,
     ),
   );

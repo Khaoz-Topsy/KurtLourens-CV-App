@@ -2,6 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:breakpoint/breakpoint.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:kurt_lourens_cv/constants/app_routes.dart';
 
 import '../components/adaptive/homepage_appbar.dart';
 import '../components/common/cached_future_builder.dart';
@@ -11,7 +12,6 @@ import '../components/tilePreseneters/project_experience_tile_presenter.dart';
 import '../components/tilePreseneters/work_experience_tile_presenter.dart';
 import '../constants/app_image.dart';
 import '../contracts/cv_data.dart';
-import '../contracts/homepage_menu_item.dart';
 import '../helper/column_helper.dart';
 import '../services/json/cv_data_json_repository.dart';
 
@@ -21,16 +21,17 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CachedFutureBuilder<ResultWithValue<CvData>>(
+    return basicGenericPageScaffold(
+      context,
+      appBar: homePageAppBar('Home'),
+      drawer: const AppDrawer(),
+      body: CachedFutureBuilder<ResultWithValue<CvData>>(
         key: const Key('home-page'),
         future: (CvDataJsonRepository()).getCVData(context),
-        whileLoading: getLoading().fullPageLoading(context),
+        whileLoading: const Center(),
         whenDoneLoading: (ResultWithValue<CvData> result) {
-          return basicGenericPageScaffold(
-            context,
-            appBar: homePageAppBar('Home'),
-            drawer: const AppDrawer(),
-            body: Padding(
+          return animateWidgetIn(
+            child: Padding(
               padding: const EdgeInsets.only(left: 8.0, right: 8.0),
               child: BreakpointBuilder(
                 builder: (BuildContext innerContext, Breakpoint breakpoint) {
@@ -57,7 +58,9 @@ class Homepage extends StatelessWidget {
               ),
             ),
           );
-        });
+        },
+      ),
+    );
   }
 }
 
@@ -104,10 +107,16 @@ List<StaggeredGridItem> getGridItems(
         gridItemType: StaggeredTile.count((numCols - 2), 1.25),
       ),
       StaggeredGridItem(
-        childBuilder: (BuildContext childContext) => const Card(
-          margin: EdgeInsets.only(top: 16.0, left: 4.0, right: 4.0),
-          child: Center(
-            child: Icon(Icons.question_mark),
+        childBuilder: (BuildContext childContext) => Card(
+          margin: const EdgeInsets.only(top: 16.0, left: 4.0, right: 4.0),
+          child: InkWell(
+            onTap: () => getNavigation().navigateAwayFromHomeAsync(
+              childContext,
+              navigateToNamed: Routes.about,
+            ),
+            child: const Center(
+              child: Icon(Icons.question_mark),
+            ),
           ),
         ),
         gridItemType: const StaggeredTile.count(2, 1.25),
@@ -153,36 +162,4 @@ StaggeredGridItem sectionHeading(String title, int numCols) {
     ),
     gridItemType: StaggeredTile.count(numCols, 0.65),
   );
-}
-
-Widget homepageMenuItemGridPresenter(
-  BuildContext context,
-  HomepageMenuItem menuItem,
-) {
-  Widget card = GestureDetector(
-    child: Card(
-        child: Stack(
-      alignment: Alignment.center,
-      children: [
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            menuItem.image,
-            Padding(
-              padding: const EdgeInsets.all(4),
-              child: Text(
-                menuItem.title,
-                maxLines: 2,
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                softWrap: false,
-              ),
-            ),
-          ],
-        ),
-      ],
-    )),
-    // onTap: () => customMenuClickHandler(context, menuItem),
-  );
-  return card;
 }

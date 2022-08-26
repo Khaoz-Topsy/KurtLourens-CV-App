@@ -6,11 +6,15 @@ import 'cv_data_social_link.dart';
 
 class CvDetail {
   final String image;
+  final String intro;
+  final String postScript;
   final List<String> descriptions;
   final List<CvDataSocialLink> socialLinks;
 
   CvDetail({
     required this.image,
+    required this.intro,
+    required this.postScript,
     required this.descriptions,
     required this.socialLinks,
   });
@@ -20,6 +24,8 @@ class CvDetail {
 
   factory CvDetail.fromJson(Map<String, dynamic> json) => CvDetail(
         image: readStringSafe(json, 'image'),
+        intro: readStringSafe(json, 'intro'),
+        postScript: readStringSafe(json, 'postScript'),
         descriptions: readListSafe(
           json,
           'descriptions',

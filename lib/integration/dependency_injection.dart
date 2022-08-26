@@ -3,6 +3,7 @@ import 'package:get_it/get_it.dart';
 
 import '../env/environment_settings.dart';
 import '../services/base/basewidget_service.dart';
+import '../services/base/loadingwidget_service.dart';
 import '../services/base/path_service.dart';
 import '../services/base/theme_service.dart';
 
@@ -20,7 +21,7 @@ void initDependencyInjection(EnvironmentSettings env) {
     path: PathService(),
     baseWidget: BaseWidgetService(),
     // dialog: DialogService(),
-    // loading: LoadingWidgetService(),
+    loading: LoadingWidgetService(),
     // language: LanguageService(),
     // snackbar: SnackbarService(),
   );

@@ -4,6 +4,8 @@ class AppImage {
   static const String drawer = '${base}DrawerHeader.png';
   static const String avatar = '${base}avatar.png';
   static const String windowIcon = '${base}windowIcon.png';
+  static const String customLoading = '${base}loading.png';
+  static const String error = '${base}error.png';
 
   static const String techFolder = '${base}tech/';
 
