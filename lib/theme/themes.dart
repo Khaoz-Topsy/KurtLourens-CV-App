@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart'
     show CupertinoThemeData, CupertinoTextThemeData;
 import 'package:flutter/material.dart';
 
+import '../constants/app_fonts.dart';
+
 ThemeData getDynamicTheme(Brightness brightness) {
   return darkTheme();
 }
@@ -35,17 +37,19 @@ ThemeData darkTheme() {
 }
 
 TextTheme _buildAppTextTheme(TextTheme base) {
-  return base.copyWith(
-    headline5: base.headline5?.copyWith(fontWeight: FontWeight.w900),
-    headline6: base.headline6?.copyWith(
-      fontSize: 18.0,
-      fontWeight: FontWeight.w500,
-    ),
-    caption: base.caption?.copyWith(
-      fontSize: 14.0,
-      fontWeight: FontWeight.w500,
-    ),
-  );
+  return base
+      .copyWith(
+        headline5: base.headline5?.copyWith(fontWeight: FontWeight.w900),
+        headline6: base.headline6?.copyWith(
+          fontSize: 18.0,
+          fontWeight: FontWeight.w500,
+        ),
+        caption: base.caption?.copyWith(
+          fontSize: 14.0,
+          fontWeight: FontWeight.w500,
+        ),
+      )
+      .apply(fontFamily: defaultFontFamily);
 }
 
 CupertinoThemeData toAppleTheme(ThemeData theme) {

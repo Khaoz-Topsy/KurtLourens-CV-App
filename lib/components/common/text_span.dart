@@ -7,11 +7,11 @@ Widget getTextSpanFromTemplateAndArray(
   String origContent, {
   int? maxLines,
   TextOverflow? overflow,
+  TextAlign? textAlign,
 }) {
-  TextStyle defaultStyle = Theme.of(context)
-      .textTheme
-      .bodyText1!
-      .copyWith(color: getTheme().getSecondaryColour(context));
+  TextStyle defaultStyle = Theme.of(context).textTheme.bodyText1!.copyWith(
+        color: getTheme().getSecondaryColour(context),
+      );
   List<String> templateArray = origContent.split(' ');
 
   List<TextSpan> textSpans = List.empty(growable: true);
@@ -32,7 +32,7 @@ Widget getTextSpanFromTemplateAndArray(
       style: Theme.of(context).textTheme.bodyText1,
       children: textSpans,
     ),
-    textAlign: TextAlign.left,
+    textAlign: textAlign ?? TextAlign.left,
     maxLines: maxLines ?? 9999,
     overflow: overflow ?? TextOverflow.ellipsis,
   );
@@ -103,7 +103,7 @@ TextSpan shortCodesHandler(
     style: TextStyle(
       color: AdaptiveTheme.of(context).mode == AdaptiveThemeMode.dark
           ? Colors.white70
-          : Colors.black54,
+          : Colors.black,
     ),
   );
 }

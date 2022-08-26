@@ -50,7 +50,11 @@ class WorkExperienceBottomSheet extends StatelessWidget {
     widgets.add(
       () => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12),
-        child: getTextSpanFromTemplateAndArray(context, wExp.content),
+        child: getTextSpanFromTemplateAndArray(
+          context,
+          wExp.content,
+          textAlign: TextAlign.center,
+        ),
       ),
     );
 

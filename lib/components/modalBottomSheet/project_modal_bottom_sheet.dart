@@ -23,11 +23,15 @@ class ProjectBottomSheet extends StatelessWidget {
     List<Widget Function()> widgets = [];
 
     widgets.add(
-      () => localImage(
-        getCvIcon(proj.image, proj.darkModeImage, ''),
-        imageHero: proj.title,
-        boxfit: BoxFit.contain,
-        height: 50,
+      () => Center(
+        child: localImage(
+          getCvIcon(proj.image, proj.darkModeImage, proj.imageTile),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8),
+          ),
+          boxfit: BoxFit.contain,
+          height: 50,
+        ),
       ),
     );
     widgets.add(() => emptySpace1x());
@@ -71,7 +75,13 @@ class ProjectBottomSheet extends StatelessWidget {
       );
     }
     widgets.add(() => emptySpace1x());
-    widgets.add(() => getTextSpanFromTemplateAndArray(context, proj.content));
+    widgets.add(
+      () => getTextSpanFromTemplateAndArray(
+        context,
+        proj.content,
+        textAlign: TextAlign.center,
+      ),
+    );
     widgets.add(() => emptySpace1x());
     widgets.add(() => customDivider());
 

@@ -50,11 +50,19 @@ class AboutPage extends StatelessWidget {
           widgets.add(() => customDivider());
           widgets.add(() => emptySpace1x());
           widgets.add(
-            () => getTextSpanFromTemplateAndArray(context, details.intro),
+            () => getTextSpanFromTemplateAndArray(
+              context,
+              details.intro,
+              textAlign: TextAlign.center,
+            ),
           );
           widgets.add(() => emptySpace1x());
           widgets.add(
-            () => getTextSpanFromTemplateAndArray(context, details.postScript),
+            () => getTextSpanFromTemplateAndArray(
+              context,
+              details.postScript,
+              textAlign: TextAlign.center,
+            ),
           );
           widgets.add(() => emptySpace1x());
           widgets.add(() => customDivider());
