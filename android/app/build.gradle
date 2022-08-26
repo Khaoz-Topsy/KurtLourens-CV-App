@@ -42,9 +42,9 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
-    defaultConfig {
+    defaultConfig {                                                                       │
+        minSdkVersion 21  
         applicationId "com.kurt_lourens_cv"
-        minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
