@@ -55,10 +55,10 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "86eabefa4bd4697e27f4d2fe49c2af038014924e"
+      resolved-ref: ab9c8c75d83df5bcfb927253b9a71e086592200a
       url: "https://github.com/AssistantApps/Flutter.Common.git"
     source: git
-    version: "0.1.72"
+    version: "0.1.74"
   async:
     dependency: transitive
     description:
@@ -353,20 +353,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.8.2+2"
-  flare_dart:
-    dependency: transitive
-    description:
-      name: flare_dart
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.3.4"
-  flare_flutter:
-    dependency: transitive
-    description:
-      name: flare_flutter
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.6"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -520,13 +506,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "7.2.0"
-  giffy_dialog:
-    dependency: transitive
-    description:
-      name: giffy_dialog
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.8.0"
   google_fonts:
     dependency: transitive
     description:
