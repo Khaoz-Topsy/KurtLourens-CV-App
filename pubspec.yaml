@@ -38,6 +38,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: 2.0.0
   pubspec_parse: 1.2.0
+  flutter_launcher_icons: 0.10.0
 
 dependency_overrides:
   # flutter_staggered_grid_view: 0.6.2
@@ -45,7 +46,7 @@ dependency_overrides:
 flutter_icons: ## flutter pub run flutter_launcher_icons:main
   ios: true
   android: true
-  remove_alpha_ios: true
+  min_sdk_android: 21
   image_path: 'assets/images/fullSizeIcon.png'
   # adaptive_icon_background: 'assets/images/fullSizeIconAdaptiveBg.png'
   # adaptive_icon_foreground: 'assets/images/fullSizeIconAdaptiveFg.png'
