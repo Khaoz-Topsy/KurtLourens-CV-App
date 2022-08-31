@@ -9,6 +9,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'cv_data_detail.dart';
 import 'cv_data_certificate.dart';
 import 'cv_data_project.dart';
+import 'cv_data_recent_blog_posts.dart';
 import 'cv_data_tech.dart';
 import 'cv_data_work_experience.dart';
 
@@ -17,6 +18,7 @@ class CvData {
   List<CvDataWorkExperience> workExperiences;
   List<CvDataCertificate> certificates;
   List<CvDataProject> projects;
+  List<CvDataRecentBlogPosts> blogPosts;
   CvDataTech tech;
 
   CvData({
@@ -24,6 +26,7 @@ class CvData {
     required this.workExperiences,
     required this.certificates,
     required this.projects,
+    required this.blogPosts,
     required this.tech,
   });
 
@@ -46,8 +49,12 @@ class CvData {
           'projects',
           (jsonItem) => CvDataProject.fromJson(jsonItem),
         ),
+        blogPosts: readListSafe(
+          json,
+          'recentBlogPosts',
+          (jsonItem) => CvDataRecentBlogPosts.fromJson(jsonItem),
+        ),
         tech: CvDataTech.fromJson(json['tech']),
-        // tech: CvDataTech.fromRawJson('{}'),
       );
 }
 
