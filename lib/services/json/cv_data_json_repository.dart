@@ -7,7 +7,7 @@ class CvDataJsonRepository extends BaseJsonService {
   Future<ResultWithValue<CvData>> getCVData(context) async {
     //await Future.delayed(Duration(milliseconds: 10000));
     try {
-      var responseJson = await getJsonFromAssets(context, 'json/cv');
+      var responseJson = await getJsonFromAssets(context, 'json/project');
       CvData data = CvData.fromRawJson(responseJson);
       return ResultWithValue<CvData>(true, data, '');
     } catch (exception) {

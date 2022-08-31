@@ -1,7 +1,9 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
-class ExperienceGridTilePresenter extends StatefulWidget {
+import '../common/on_hover_float.dart';
+
+class ExperienceGridTilePresenter extends StatelessWidget {
   final Widget image;
   final String title;
   final String subtitle;
@@ -16,22 +18,12 @@ class ExperienceGridTilePresenter extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  createState() => _ExperienceGridTilePresenterState();
-}
-
-class _ExperienceGridTilePresenterState
-    extends State<ExperienceGridTilePresenter> {
-  double elevation = 4.0;
-  double scale = 1.0;
-  Offset translate = const Offset(0, 0);
-
-  @override
   Widget build(context) {
-    return Transform.translate(
-      offset: translate,
-      child: Transform.scale(
-        scale: scale,
-        child: Container(
+    return Padding(
+      padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+      child: OnHoverFloat(
+        onTap: onTap,
+        content: Container(
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
@@ -46,52 +38,31 @@ class _ExperienceGridTilePresenterState
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
             ),
-            child: InkWell(
-              borderRadius: const BorderRadius.all(
-                Radius.circular(16),
-              ),
-              onHover: (isHovered) {
-                if (isHovered) {
-                  setState(() {
-                    elevation = 20.0;
-                    scale = 1.02;
-                    translate = const Offset(0, -2);
-                  });
-                } else {
-                  setState(() {
-                    elevation = 4.0;
-                    scale = 1.0;
-                    translate = const Offset(0, 0);
-                  });
-                }
-              },
-              onTap: widget.onTap,
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: widget.image,
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: image,
+                ),
+                emptySpace(1),
+                Flexible(
+                  fit: FlexFit.loose,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        title,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(fontSize: 20),
+                      ),
+                      emptySpace(0.5),
+                      Text(subtitle, maxLines: 1),
+                    ],
                   ),
-                  emptySpace(1),
-                  Flexible(
-                    fit: FlexFit.loose,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          widget.title,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(fontSize: 20),
-                        ),
-                        emptySpace(0.5),
-                        Text(widget.subtitle, maxLines: 1),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
