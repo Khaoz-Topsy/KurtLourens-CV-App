@@ -25,7 +25,9 @@ Widget responsiveStaggeredGridTilePresenter(
             ),
             (text != null)
                 ? const Padding(
-                    child: Text('test'), padding: EdgeInsets.only(top: 4))
+                    padding: EdgeInsets.only(top: 4),
+                    child: Text('test'),
+                  )
                 : const SizedBox(width: 0, height: 0),
           ],
         ),
@@ -99,13 +101,17 @@ Widget responsiveStaggeredGridBaseTilePresenter(
   // children.add(Center(child: image));
   children.add(
     Padding(
-      child: image,
       padding: const EdgeInsets.only(left: 8, top: 8, right: 8, bottom: 24),
+      child: image,
     ),
   );
   if (text != null) {
     children.add(Positioned(
+      bottom: 4,
+      left: 4,
+      right: 4,
       child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 2),
         child: Text(
           getTranslations().fromKey(text),
           textAlign: TextAlign.center,
@@ -115,11 +121,7 @@ Widget responsiveStaggeredGridBaseTilePresenter(
             color: getTheme().getForegroundTextColour(backgroundColor),
           ),
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 2),
       ),
-      bottom: 4,
-      left: 4,
-      right: 4,
     ));
   }
 
