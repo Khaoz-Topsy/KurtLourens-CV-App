@@ -1,6 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/app_border.dart';
 import '../common/on_hover_float.dart';
 
 class ExperienceGridTilePresenter extends StatelessWidget {
@@ -35,9 +36,7 @@ class ExperienceGridTilePresenter extends StatelessWidget {
             ],
           ),
           child: Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
-            ),
+            shape: defaultCardBorderRadius,
             child: Row(
               children: [
                 Padding(

@@ -1,6 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/app_border.dart';
 import '../../contracts/cv_data_project.dart';
 import '../../contracts/cv_data_tech.dart';
 import '../../helper/image_helper.dart';
@@ -17,9 +18,7 @@ Widget projectExperienceGridTilePresenter(
       getCvIcon(proj.image, proj.darkModeImage, proj.imageTile),
       imageHero: proj.title,
       boxfit: BoxFit.fitHeight,
-      borderRadius: const BorderRadius.all(
-        Radius.circular(16),
-      ),
+      borderRadius: defaultImageBorderRadius,
     ),
     title: proj.title,
     subtitle: proj.timePeriodText,

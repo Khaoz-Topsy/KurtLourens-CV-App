@@ -2,6 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../constants/app_border.dart';
 import '../../constants/app_duration.dart';
 import '../../constants/app_image.dart';
 import '../../constants/app_modal.dart';
@@ -26,9 +27,7 @@ class ProjectBottomSheet extends StatelessWidget {
       () => Center(
         child: localImage(
           getCvIcon(proj.image, proj.darkModeImage, proj.imageTile),
-          borderRadius: const BorderRadius.all(
-            Radius.circular(8),
-          ),
+          borderRadius: defaultImageBorderRadius,
           boxfit: BoxFit.contain,
           height: 50,
         ),

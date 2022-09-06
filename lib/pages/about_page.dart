@@ -8,6 +8,7 @@ import '../components/common/cached_future_builder.dart';
 import '../components/common/chip_link.dart';
 import '../components/common/text_span.dart';
 import '../components/scaffoldTemplates/generic_page_scaffold.dart';
+import '../constants/app_border.dart';
 import '../contracts/cv_data.dart';
 import '../services/json/cv_data_json_repository.dart';
 
@@ -28,10 +29,13 @@ class AboutPage extends StatelessWidget {
           List<Widget Function()> widgets = [];
 
           widgets.add(
-            () => localImage(
-              AppImage.avatar,
-              boxfit: BoxFit.contain,
-              height: 100,
+            () => Center(
+              child: localImage(
+                AppImage.avatar,
+                boxfit: BoxFit.fitHeight,
+                height: 100,
+                borderRadius: defaultImageBorderRadius,
+              ),
             ),
           );
           widgets.add(() => emptySpace2x());

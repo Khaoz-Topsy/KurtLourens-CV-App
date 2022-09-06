@@ -1,6 +1,7 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/app_border.dart';
 import '../../contracts/cv_data_recent_blog_posts.dart';
 import '../../helper/generic_helper.dart';
 import '../common/on_hover_float.dart';
@@ -23,8 +24,7 @@ Widget blogPostGridTilePresenter(
         semanticContainer: true,
         clipBehavior: Clip.antiAliasWithSaveLayer,
         margin: const EdgeInsets.all(4),
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+        shape: defaultCardBorderRadius,
         child: Column(
           children: [
             image,
