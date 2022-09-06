@@ -42,15 +42,18 @@ List<HomepageMenuItem> getMenuOptionsSection1(
       onTap: (_) => launchExternalURL(KurtExternalUrls.assistantNMSWeb),
     ),
     HomepageMenuItem(
-      image: localGetFromIcon(Icons.person),
-      title: 'CV Website',
-      onTap: (buttonCtx) {
-        getNavigation().pop(buttonCtx);
-        getNavigation().navigateAwayFromHomeAsync(
-          context,
-          navigateToNamed: Routes.about,
-        );
-      },
+      image: ConstrainedBox(
+        constraints: const BoxConstraints(
+          maxWidth: 35,
+          maxHeight: 35,
+        ),
+        child: localImage(
+          AppImage.playgroundIcon,
+          borderRadius: defaultImageBorderRadius,
+        ),
+      ),
+      title: 'Kurt\'s Playground',
+      onTap: (_) => launchExternalURL(KurtExternalUrls.playground),
     ),
   ];
 }

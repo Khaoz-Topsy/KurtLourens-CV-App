@@ -8,6 +8,7 @@ class AppImage {
   static const String error = '${base}error.png';
 
   static const String assistantNMSIcon = '${base}assistantNMSIcon.png';
+  static const String playgroundIcon = '${base}playground.png';
 
   static const String techFolder = '${base}tech/';
 

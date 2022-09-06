@@ -4,4 +4,5 @@ class KurtExternalUrls {
   static const String directoryOfWebsites = 'https://khaoznet.xyz';
 
   static const String assistantNMSWeb = 'https://nmsassistant.com';
+  static const String playground = 'https://playground.kurtlourens.com';
 }
