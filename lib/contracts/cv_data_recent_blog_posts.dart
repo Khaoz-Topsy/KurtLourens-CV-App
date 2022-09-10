@@ -31,7 +31,7 @@ class CvDataRecentBlogPosts {
         guid: readStringSafe(json, 'guid'),
         link: readStringSafe(json, 'link'),
         title: readStringSafe(json, 'title'),
-        description: readStringSafe(json, 'description'),
+        description: readStringSafe(json, 'excerpt'),
         imageUrl: readStringSafe(json, 'imageUrl'),
         tags: readListSafe(
           json,

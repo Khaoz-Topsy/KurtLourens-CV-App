@@ -91,13 +91,14 @@ class ProjectBottomSheet extends StatelessWidget {
         CvDataTechItem? techIcon = techLookup.techs[techUsed.id];
         if (techIcon == null) continue;
 
+        var techImage = (techIcon.img.contains('.svg'))
+            ? SvgPicture.asset('${AppImage.techFolder}${techIcon.img}')
+            : localImage('tech/${techIcon.img}');
         widgets.add(
           () => ListTile(
             leading: ConstrainedBox(
               constraints: const BoxConstraints(maxWidth: 50),
-              child: (techIcon.img.contains('.svg'))
-                  ? SvgPicture.asset('${AppImage.techFolder}${techIcon.img}')
-                  : localImage('tech/${techIcon.img}'),
+              child: techImage,
             ),
             title: Text(techIcon.name),
             subtitle: Text(
@@ -105,6 +106,38 @@ class ProjectBottomSheet extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
+            onTap: () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) => AlertDialog(
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      emptySpace1x(),
+                      ConstrainedBox(
+                        constraints: const BoxConstraints(
+                          maxHeight: 100,
+                          maxWidth: 100,
+                        ),
+                        child: techImage,
+                      ),
+                      emptySpace1x(),
+                      Text(
+                        techIcon.name,
+                        style: const TextStyle(fontSize: 20),
+                        textAlign: TextAlign.center,
+                      ),
+                      emptySpace2x(),
+                      Text(
+                        techUsed.description,
+                        maxLines: 100,
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
+                ),
+              );
+            },
           ),
         );
       }

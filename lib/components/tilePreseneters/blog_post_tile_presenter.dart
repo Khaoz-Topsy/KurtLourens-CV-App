@@ -12,7 +12,6 @@ Widget blogPostGridTilePresenter(
 ) {
   Widget image = networkImage(
     blogPosts.imageUrl,
-    height: 200,
     width: double.infinity,
     boxfit: BoxFit.cover,
     loading: getLoading().smallLoadingIndicator(),
@@ -27,7 +26,10 @@ Widget blogPostGridTilePresenter(
         shape: defaultCardBorderRadius,
         child: Column(
           children: [
-            image,
+            ConstrainedBox(
+              constraints: const BoxConstraints(maxHeight: 200),
+              child: image,
+            ),
             Padding(
               padding: const EdgeInsets.only(
                 top: 12,
@@ -47,7 +49,10 @@ Widget blogPostGridTilePresenter(
               flex: 1,
               fit: FlexFit.tight,
               child: Padding(
-                padding: const EdgeInsets.all(4),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 4,
+                  horizontal: 12,
+                ),
                 child: Text(
                   blogPosts.description,
                   textAlign: TextAlign.center,
@@ -57,17 +62,13 @@ Widget blogPostGridTilePresenter(
                 ),
               ),
             ),
-            Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Padding(
-                padding: const EdgeInsets.all(4),
-                child: Wrap(
-                  alignment: WrapAlignment.center,
-                  children: blogPosts.tags
-                      .map((tag) => genericChip(context, tag))
-                      .toList(),
-                ),
+            Padding(
+              padding: const EdgeInsets.all(4),
+              child: Wrap(
+                alignment: WrapAlignment.center,
+                children: blogPosts.tags
+                    .map((tag) => genericChip(context, tag))
+                    .toList(),
               ),
             ),
           ],

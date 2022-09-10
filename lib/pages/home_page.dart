@@ -99,22 +99,22 @@ List<StaggeredGridItem> getGridItems(
                 ),
               ),
               emptySpace(2),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text(
-                    'Kurt Lourens',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    'Senior Software Engineer',
-                    maxLines: 2,
-                  )
-                ],
-              )
+              Flexible(
+                fit: FlexFit.loose,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      'Kurt Lourens',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    Text('Senior Software Engineer', maxLines: 1)
+                  ],
+                ),
+              ),
             ],
           ),
         ),
