@@ -1,1 +1,3 @@
-Fix AppCenter crashing due to older Android setup
+- Fixed text overflowing on certain tiles
+- Better responsiveness on the blog posts section
+- Added detail view on tap for the "Technologies Used" section
