@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 BoxConstraints modalDefaultSize(BuildContext context) {
   return BoxConstraints(
-    minHeight: (MediaQuery.of(context).size.height) / 2,
+    minHeight: (MediaQuery.of(context).size.height) * 0.6,
     maxHeight: (MediaQuery.of(context).size.height) * 0.9,
   );
 }

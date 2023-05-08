@@ -6,21 +6,19 @@ import FlutterMacOS
 import Foundation
 
 import bitsdojo_window_macos
-import file_selector_macos
 import flutter_secure_storage_macos
-import package_info_plus_macos
-import path_provider_macos
+import package_info_plus
+import path_provider_foundation
 import platform_device_id
 import platform_device_id_macos
-import share_plus_macos
-import shared_preferences_macos
+import share_plus
+import shared_preferences_foundation
 import sqflite
 import url_launcher_macos
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
   BitsdojoWindowPlugin.register(with: registry.registrar(forPlugin: "BitsdojoWindowPlugin"))
-  FileSelectorPlugin.register(with: registry.registrar(forPlugin: "FileSelectorPlugin"))
-  FlutterSecureStorageMacosPlugin.register(with: registry.registrar(forPlugin: "FlutterSecureStorageMacosPlugin"))
+  FlutterSecureStoragePlugin.register(with: registry.registrar(forPlugin: "FlutterSecureStoragePlugin"))
   FLTPackageInfoPlusPlugin.register(with: registry.registrar(forPlugin: "FLTPackageInfoPlusPlugin"))
   PathProviderPlugin.register(with: registry.registrar(forPlugin: "PathProviderPlugin"))
   PlatformDeviceIdMacosPlugin.register(with: registry.registrar(forPlugin: "PlatformDeviceIdMacosPlugin"))

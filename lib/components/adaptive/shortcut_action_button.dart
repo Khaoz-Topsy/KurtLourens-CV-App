@@ -17,9 +17,10 @@ Widget shortcutPresenter(context, ActionItem action) => Row(
       ],
     );
 
-Widget _androidShortcutActionButton(context, List<ActionItem> actions) {
+Widget _androidShortcutActionButton(
+    BuildContext context, List<ActionItem> actions) {
   if (actions.length == 1) {
-    return actionItemToAndroidAction(actions)[0];
+    return actionItemToAndroidAction(context, actions)[0];
   }
   return PopupMenuButton<Function>(
     onSelected: (Function? func) {

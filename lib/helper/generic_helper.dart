@@ -14,7 +14,7 @@ Widget genericItemImage(BuildContext context, String imagePath,
         onTap: onTap,
         child: Container(
           margin: const EdgeInsets.all(4.0),
-          child: localImage(imagePath, height: height),
+          child: LocalImage(imagePath: imagePath, height: height),
         ),
       ),
     );

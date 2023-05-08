@@ -17,7 +17,7 @@ Widget chipLink(
           style: TextStyle(color: foregroundColor ?? Colors.black),
         ),
         if (externalUrl != null) ...[
-          emptySpace(0.5),
+          const EmptySpace(0.5),
           const Icon(Icons.link, color: Colors.black),
         ],
       ],

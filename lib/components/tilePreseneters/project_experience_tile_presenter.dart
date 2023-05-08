@@ -2,6 +2,7 @@ import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_border.dart';
+import '../../constants/app_modal.dart';
 import '../../contracts/cv_data_project.dart';
 import '../../contracts/cv_data_tech.dart';
 import '../../helper/image_helper.dart';
@@ -14,20 +15,29 @@ Widget projectExperienceGridTilePresenter(
   CvDataTech techLookup,
 ) {
   return ExperienceGridTilePresenter(
-    image: localImage(
-      getCvIcon(proj.image, proj.darkModeImage, proj.imageTile),
-      imageHero: proj.title,
-      boxfit: BoxFit.fitHeight,
-      borderRadius: defaultImageBorderRadius,
+    image: ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 50),
+      child: LocalImage(
+        imagePath: getCvIcon(proj.image, proj.darkModeImage, proj.imageTile),
+        imageHero: proj.title,
+        boxfit: BoxFit.fitHeight,
+        borderRadius: defaultImageBorderRadius,
+      ),
     ),
     title: proj.title,
     subtitle: proj.timePeriodText,
-    onTap: () => adaptiveBottomModalSheet(
+    onTap: () => adaptiveListBottomModalSheet(
       context,
       hasRoundedCorners: true,
-      builder: (BuildContext innerContext) => ProjectBottomSheet(
+      constraints: modalDefaultSize(context),
+      builder: (
+        BuildContext innerContext,
+        ScrollController scrollController,
+      ) =>
+          ProjectBottomSheet(
         proj,
         techLookup,
+        scrollController,
       ),
     ),
   );

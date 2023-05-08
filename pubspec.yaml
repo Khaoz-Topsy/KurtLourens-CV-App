@@ -15,20 +15,19 @@ dependencies:
 
   # AssistantApps
   assistantapps_flutter_common:
-    git: https://github.com/AssistantApps/Flutter.Common.git
-    # path: 'C:\Development\Projects\AssistantApps\assistantapps_flutter_common'
+    # git: https://github.com/AssistantApps/Flutter.Common.git
+    path: 'C:\Development\Projects\AssistantApps\assistantapps_flutter_common'
 
   # Base
   get_it: 7.2.0
-  http: 0.13.4
+  http: 0.13.5
 
   # UI
-  adaptive_theme: 3.1.1
+  adaptive_theme: 3.2.0
   auto_animated: 3.1.0
-  bitsdojo_window: 0.1.2
+  bitsdojo_window: 0.1.5
   breakpoint: 1.2.0
-  flutter_staggered_grid_view: 0.4.1
-  flutter_svg: 1.0.3
+  flutter_svg: 2.0.4
 
   # Misc
   after_layout: 1.2.0
@@ -40,8 +39,8 @@ dev_dependencies:
   pubspec_parse: 1.2.0
   flutter_launcher_icons: 0.10.0
 
-dependency_overrides:
-  # flutter_staggered_grid_view: 0.6.2
+# dependency_overrides:
+#   flutter_staggered_grid_view: 0.6.2
 
 flutter_icons: ## flutter pub run flutter_launcher_icons:main
   ios: true

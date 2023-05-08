@@ -9,7 +9,7 @@ Widget getTextSpanFromTemplateAndArray(
   TextOverflow? overflow,
   TextAlign? textAlign,
 }) {
-  TextStyle defaultStyle = Theme.of(context).textTheme.bodyText1!.copyWith(
+  TextStyle defaultStyle = Theme.of(context).textTheme.bodyLarge!.copyWith(
         color: getTheme().getSecondaryColour(context),
       );
   List<String> templateArray = origContent.split(' ');
@@ -29,7 +29,7 @@ Widget getTextSpanFromTemplateAndArray(
 
   return RichText(
     text: TextSpan(
-      style: Theme.of(context).textTheme.bodyText1,
+      style: Theme.of(context).textTheme.bodyLarge,
       children: textSpans,
     ),
     textAlign: textAlign ?? TextAlign.left,

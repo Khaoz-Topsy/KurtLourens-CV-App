@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../constants/app_border.dart';
-import '../../constants/app_duration.dart';
 import '../../constants/app_image.dart';
-import '../../constants/app_modal.dart';
 import '../../contracts/cv_data_project.dart';
 import '../../contracts/cv_data_tech.dart';
 import '../../contracts/cv_data_tech_used.dart';
@@ -16,8 +14,13 @@ import '../common/text_span.dart';
 class ProjectBottomSheet extends StatelessWidget {
   final CvDataProject proj;
   final CvDataTech techLookup;
-  const ProjectBottomSheet(this.proj, this.techLookup, {Key? key})
-      : super(key: key);
+  final ScrollController scrollController;
+  const ProjectBottomSheet(
+    this.proj,
+    this.techLookup,
+    this.scrollController, {
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,16 +28,16 @@ class ProjectBottomSheet extends StatelessWidget {
 
     widgets.add(
       () => Center(
-        child: localImage(
-          getCvIcon(proj.image, proj.darkModeImage, proj.imageTile),
+        child: LocalImage(
+          imagePath: getCvIcon(proj.image, proj.darkModeImage, proj.imageTile),
           borderRadius: defaultImageBorderRadius,
           boxfit: BoxFit.contain,
           height: 50,
         ),
       ),
     );
-    widgets.add(() => emptySpace1x());
-    widgets.add(() => genericItemName(proj.title));
+    widgets.add(() => const EmptySpace1x());
+    widgets.add(() => GenericItemName(proj.title));
 
     widgets.add(
       () => Wrap(
@@ -53,7 +56,7 @@ class ProjectBottomSheet extends StatelessWidget {
     widgets.add(() => customDivider());
 
     if (proj.location.length > 2) {
-      widgets.add(() => genericItemGroup(proj.location));
+      widgets.add(() => GenericItemGroup(proj.location));
     }
 
     if (proj.links.isNotEmpty) {
@@ -73,7 +76,7 @@ class ProjectBottomSheet extends StatelessWidget {
         ),
       );
     }
-    widgets.add(() => emptySpace1x());
+    widgets.add(() => const EmptySpace1x());
     widgets.add(
       () => getTextSpanFromTemplateAndArray(
         context,
@@ -81,19 +84,19 @@ class ProjectBottomSheet extends StatelessWidget {
         textAlign: TextAlign.center,
       ),
     );
-    widgets.add(() => emptySpace1x());
+    widgets.add(() => const EmptySpace1x());
     widgets.add(() => customDivider());
 
     if (proj.techUsed.isNotEmpty) {
-      widgets.add(() => emptySpace2x());
-      widgets.add(() => genericItemGroup('Technologies used'));
+      widgets.add(() => const EmptySpace2x());
+      widgets.add(() => const GenericItemGroup('Technologies used'));
       for (CvDataTechUsed techUsed in proj.techUsed) {
         CvDataTechItem? techIcon = techLookup.techs[techUsed.id];
         if (techIcon == null) continue;
 
         var techImage = (techIcon.img.contains('.svg'))
             ? SvgPicture.asset('${AppImage.techFolder}${techIcon.img}')
-            : localImage('tech/${techIcon.img}');
+            : LocalImage(imagePath: 'tech/${techIcon.img}');
         widgets.add(
           () => ListTile(
             leading: ConstrainedBox(
@@ -113,7 +116,7 @@ class ProjectBottomSheet extends StatelessWidget {
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      emptySpace1x(),
+                      const EmptySpace1x(),
                       ConstrainedBox(
                         constraints: const BoxConstraints(
                           maxHeight: 100,
@@ -121,13 +124,13 @@ class ProjectBottomSheet extends StatelessWidget {
                         ),
                         child: techImage,
                       ),
-                      emptySpace1x(),
+                      const EmptySpace1x(),
                       Text(
                         techIcon.name,
                         style: const TextStyle(fontSize: 20),
                         textAlign: TextAlign.center,
                       ),
-                      emptySpace2x(),
+                      const EmptySpace2x(),
                       Text(
                         techUsed.description,
                         maxLines: 100,
@@ -143,22 +146,13 @@ class ProjectBottomSheet extends StatelessWidget {
       }
     }
 
-    widgets.add(() => emptySpace8x());
+    widgets.add(() => const EmptySpace8x());
 
-    return AnimatedSize(
-      duration: AppDuration.modal,
-      child: animateWidgetIn(
-        duration: AppDuration.modal,
-        child: Container(
-          constraints: modalDefaultSize(context),
-          child: ListView.builder(
-            padding: const EdgeInsets.all(20),
-            itemCount: widgets.length,
-            itemBuilder: (_, int index) => widgets[index](),
-            shrinkWrap: true,
-          ),
-        ),
-      ),
+    return ListView.builder(
+      padding: const EdgeInsets.all(20),
+      itemCount: widgets.length,
+      itemBuilder: (_, int index) => widgets[index](),
+      controller: scrollController,
     );
   }
 }

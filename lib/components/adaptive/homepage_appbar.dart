@@ -39,7 +39,7 @@ class HomePageAppBar extends StatelessWidget
   ) {
     List<Widget> widgets = List.empty(growable: true);
     widgets.addAll(
-      actionItemToAndroidAction(actions ?? List.empty(growable: true)),
+      actionItemToAndroidAction(context, actions ?? List.empty(growable: true)),
     );
     return adaptiveAppBar(
       context,

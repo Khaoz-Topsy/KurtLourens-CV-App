@@ -11,9 +11,8 @@ List<HomepageMenuItem> getMenuOptionsSection1(
   Color drawerIconColour,
 ) {
   //
-  Widget localGetFromIcon(IconData icon) =>
-      getCorrectlySizedImageFromIcon(context, icon,
-          colour: drawerIconColour, maxSize: imageSize);
+  Widget localGetFromIcon(IconData icon) => CorrectlySizedImageFromIcon(
+      icon: icon, colour: drawerIconColour, maxSize: imageSize);
 
   return [
     HomepageMenuItem(
@@ -32,8 +31,8 @@ List<HomepageMenuItem> getMenuOptionsSection1(
           maxWidth: 35,
           maxHeight: 35,
         ),
-        child: localImage(
-          AppImage.assistantNMSIcon,
+        child: LocalImage(
+          imagePath: AppImage.assistantNMSIcon,
           borderRadius: defaultImageBorderRadius,
         ),
       ),
@@ -46,8 +45,8 @@ List<HomepageMenuItem> getMenuOptionsSection1(
           maxWidth: 35,
           maxHeight: 35,
         ),
-        child: localImage(
-          AppImage.playgroundIcon,
+        child: LocalImage(
+          imagePath: AppImage.playgroundIcon,
           borderRadius: defaultImageBorderRadius,
         ),
       ),

@@ -10,7 +10,7 @@ class Routes {
 
 Map<String, Widget Function(BuildContext)> initNamedRoutes() {
   Map<String, WidgetBuilder> routes = {
-    Routes.home: (context) => Homepage(),
+    Routes.home: (context) => const Homepage(),
     Routes.about: (context) => const AboutPage(),
   };
   return routes;

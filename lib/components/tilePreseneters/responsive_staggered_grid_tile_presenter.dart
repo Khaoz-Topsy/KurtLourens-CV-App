@@ -69,9 +69,8 @@ Widget responsiveStaggeredGridIconTilePresenter(
   return responsiveStaggeredGridBaseTilePresenter(
     context,
     Center(
-        child: getCorrectlySizedImageFromIcon(
-      context,
-      icon,
+        child: CorrectlySizedImageFromIcon(
+      icon: icon,
       maxSize: 45,
       colour: Colors.white,
     )),

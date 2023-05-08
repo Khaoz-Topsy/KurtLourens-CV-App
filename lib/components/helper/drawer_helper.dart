@@ -1,5 +1,4 @@
 import 'package:assistantapps_flutter_common/assistantapps_flutter_common.dart';
-import 'package:assistantapps_flutter_common/contracts/misc/versionDetail.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/homepage_items.dart';
@@ -9,7 +8,7 @@ List<Widget> getDrawerItems(context) {
   List<Widget> widgets = List.empty(growable: true);
   Color drawerIconColour = getTheme().getDarkModeSecondaryColour();
 
-  widgets.add(emptySpace(0.5));
+  widgets.add(const EmptySpace(0.5));
   widgets.addAll(_mapToDrawerItem(
     context,
     getMenuOptionsSection1(context, drawerIconColour),
@@ -31,7 +30,7 @@ List<Widget> getDrawerItems(context) {
 
         return ListTile(
           key: const Key('versionNumber'),
-          leading: getCorrectlySizedImageFromIcon(context, Icons.code),
+          leading: const CorrectlySizedImageFromIcon(icon: Icons.code),
           title: Text(appVersionString),
           onTap: () {},
           dense: true,
@@ -39,7 +38,7 @@ List<Widget> getDrawerItems(context) {
       },
     ),
   );
-  widgets.add(emptySpace3x());
+  widgets.add(const EmptySpace3x());
 
   return widgets;
 }

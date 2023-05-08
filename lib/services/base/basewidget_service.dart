@@ -55,4 +55,69 @@ class BaseWidgetService implements IBaseWidgetService {
         showBackAction: showBackAction,
         showHomeAction: showHomeAction,
       );
+
+  @override
+  Widget adaptiveCheckbox(
+      {Key? key,
+      required bool value,
+      required void Function(bool newValue) onChanged,
+      Color? activeColor}) {
+    // TODO: implement adaptiveCheckbox
+    throw UnimplementedError();
+  }
+
+  @override
+  Widget appChip({
+    Key? key,
+    String? text,
+    Widget? label,
+    TextStyle? style,
+    EdgeInsets? labelPadding,
+    double? elevation,
+    EdgeInsets? padding,
+    Color? shadowColor,
+    Icon? deleteIcon,
+    void Function()? onDeleted,
+    void Function()? onTap,
+    Color? backgroundColor,
+  }) =>
+      AdaptiveChip(
+        key: key,
+        text: text,
+        label: label,
+        style: style,
+        labelPadding: labelPadding,
+        elevation: elevation,
+        padding: padding,
+        shadowColor: shadowColor,
+        deleteIcon: deleteIcon,
+        onDeleted: onDeleted,
+        onTap: onTap,
+        backgroundColor: backgroundColor,
+      );
+
+  @override
+  Widget basicBadge({
+    Key? key,
+    required String text,
+    required Widget? child,
+    Color? textColour,
+  }) =>
+      BasicBadge(
+        key: key,
+        text: text,
+        textColour: textColour ?? Colors.black,
+        child: child,
+      );
+
+  @override
+  int tabletBreakpoint() => 800;
+
+  @override
+  int desktopBreakpoint() => 1440;
+
+  @override
+  Widget customDivider() => isWeb
+      ? Divider(thickness: .5, color: Colors.grey[800])
+      : Divider(color: Colors.grey[800]);
 }

@@ -4,7 +4,6 @@ import 'package:kurt_lourens_cv/contracts/cv_data_detail.dart';
 
 import '../../constants/app_image.dart';
 import '../components/adaptive/homepage_appbar.dart';
-import '../components/common/cached_future_builder.dart';
 import '../components/common/chip_link.dart';
 import '../components/common/text_span.dart';
 import '../components/scaffoldTemplates/generic_page_scaffold.dart';
@@ -23,22 +22,22 @@ class AboutPage extends StatelessWidget {
       body: CachedFutureBuilder<ResultWithValue<CvData>>(
         key: const Key('home-page'),
         future: (CvDataJsonRepository()).getCVData(context),
-        whileLoading: const Center(),
+        whileLoading: () => const Center(),
         whenDoneLoading: (ResultWithValue<CvData> result) {
           CvDetail details = result.value.details;
           List<Widget Function()> widgets = [];
 
           widgets.add(
             () => Center(
-              child: localImage(
-                AppImage.avatar,
+              child: LocalImage(
+                imagePath: AppImage.avatar,
                 boxfit: BoxFit.fitHeight,
                 height: 100,
                 borderRadius: defaultImageBorderRadius,
               ),
             ),
           );
-          widgets.add(() => emptySpace2x());
+          widgets.add(() => const EmptySpace2x());
 
           for (String descriptor in details.descriptions) {
             widgets.add(
@@ -50,9 +49,9 @@ class AboutPage extends StatelessWidget {
               ),
             );
           }
-          widgets.add(() => emptySpace1x());
+          widgets.add(() => const EmptySpace1x());
           widgets.add(() => customDivider());
-          widgets.add(() => emptySpace1x());
+          widgets.add(() => const EmptySpace1x());
           widgets.add(
             () => getTextSpanFromTemplateAndArray(
               context,
@@ -60,7 +59,7 @@ class AboutPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           );
-          widgets.add(() => emptySpace1x());
+          widgets.add(() => const EmptySpace1x());
           widgets.add(
             () => getTextSpanFromTemplateAndArray(
               context,
@@ -68,12 +67,12 @@ class AboutPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           );
-          widgets.add(() => emptySpace1x());
+          widgets.add(() => const EmptySpace1x());
           widgets.add(() => customDivider());
 
           if (details.socialLinks.isNotEmpty) {
-            widgets.add(() => emptySpace2x());
-            widgets.add(() => genericItemGroup('Links'));
+            widgets.add(() => const EmptySpace2x());
+            widgets.add(() => const GenericItemGroup('Links'));
             widgets.add(
               () => Wrap(
                 alignment: WrapAlignment.center,
@@ -91,7 +90,7 @@ class AboutPage extends StatelessWidget {
             );
           }
 
-          widgets.add(() => emptySpace8x());
+          widgets.add(() => const EmptySpace8x());
 
           return animateWidgetIn(
             child: Padding(
